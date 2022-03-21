@@ -3,7 +3,7 @@ LABEL maintainer="max.focker.shih@gmail.com"
 
 ENV CLOUDSDK_CORE_DISABLE_PROMPTS 1
 ENV DATA_DIR "/pubsub-data"
-ENV HOST_PORT 8085
+ENV HOST_PORT 9000
 ENV PUBSUB_PROJECT_ID test-pubsub
 
 RUN apk --no-cache add openjdk8-jre
@@ -17,7 +17,7 @@ RUN gcloud config set disable_usage_reporting true &&  \
 RUN mkdir -p "${DATA_DIR}"
 
 # Expose the default emulator port
-EXPOSE 8085
+EXPOSE 9000
 
 ADD start_emulator.sh /
 RUN chmod +x /start_emulator.sh

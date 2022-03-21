@@ -4,6 +4,7 @@ LABEL maintainer="max.focker.shih@gmail.com"
 ENV CLOUDSDK_CORE_DISABLE_PROMPTS 1
 ENV DATA_DIR "/pubsub-data"
 ENV HOST_PORT 8085
+ENV PUBSUB_PROJECT_ID test-pubsub
 
 RUN apk --no-cache add openjdk8-jre
 
